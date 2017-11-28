@@ -13,7 +13,7 @@
  * @private
  */
 
-var deprecate = require('depd')('response-time')
+var deprecate = require('depd')('response-time')//弃用：这将在STDERR上显示一个弃用的消息“oldfunction”从“response—time”弃用。
 var onHeaders = require('on-headers')
 
 /**
