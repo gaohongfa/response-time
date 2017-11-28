@@ -14,7 +14,7 @@
  */
 
 var deprecate = require('depd')('response-time')//弃用：这将在STDERR上显示一个弃用的消息“oldfunction”从“response—time”弃用。
-var onHeaders = require('on-headers')
+var onHeaders = require('on-headers')//onHeaders(res, listener).listener为监听的对象。
 
 /**
  * Module exports.
@@ -24,11 +24,11 @@ var onHeaders = require('on-headers')
 module.exports = responseTime
 
 /**
- * Create a middleware to add a `X-Response-Time` header displaying
- * the response duration in milliseconds.
+ * Create a middleware to add a `X-Response-Time` header displaying 创建一个中间件添加` x-response-time `标题显示
+ * the response duration in milliseconds.响应持续时间为毫秒
  *
- * @param {object|function} [options]
- * @param {number} [options.digits=3]
+ * @param {object|function} [options] 对象或函数类型的参数
+ * @param {number} [options.digits=3] 
  * @param {string} [options.header=X-Response-Time]
  * @param {boolean} [options.suffix=true]
  * @return {function}
